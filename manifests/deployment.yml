@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "kubernetesservice-834f"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "kubernetesservice-834f"
+    spec:
+      containers:
+        - name: "kubernetesservice-834f"
+          image: "kuberneteshellow.azurecr.io/kubernetesservice"
+          ports:
+          - containerPort: 8080
